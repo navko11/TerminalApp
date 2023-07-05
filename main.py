@@ -1,16 +1,31 @@
-#Payroll app
+import draft
+#Main menu
 
-positions = []
+
+def main():
+    print("1. View employees")
+    print("2. View payrates")
+    print("3. Help")
+    print("4. Exit program")
 
 
-Level1 = 60000
-level2 = 65000
-level3 = 75000
-level4 = 90000
-level5 = 120000
 
-Worker1 = {
-    'name' : 'rob',
-    'position' : '()',
-    'branch' : 'Sydney' 
-}
+print("Welcome to Payroll")
+print("------------------")
+main()
+
+selection = int(input("Enter option> "))
+
+while selection != 4:
+    if selection == 1:
+        print(draft.employees)
+    elif selection == 2:
+        print("List of payrates")
+    elif selection == 3:
+        print("Help list")
+    elif selection == 4:
+        print("Exiting program")
+    else:
+        print("Invalid input, try again.")
+    
+    selection = int(input("Enter option> "))
