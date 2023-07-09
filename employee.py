@@ -23,7 +23,7 @@ employees[name] = employee
 
 # View added employee
 for name, employee in employees.items():
-    print("***** New Employee Added *****")
+    print("***** New Employee Added")
     print(f"Employee Name: {employee.name}")
     print(f"Position: {employee.position}")
     print(f"Paygrade Level: {employee.paygrade}")
