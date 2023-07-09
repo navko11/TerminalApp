@@ -11,7 +11,13 @@ def employee_details():
     name = input("Enter employee name: ")
     position = input("Enter employee position: ")
     paygrade = int(input("Enter employee paygrade level (0-6): "))
+    while paygrade not in [0, 1, 2, 3, 4, 5, 6]:
+        print("Invalid input")
+        paygrade = int(input("Enter employee paygrade level (0-6): "))
     experience = input("Enter employee experience type (junior/medior/senior): ")
+    while experience not in ["junior","medior","senior"]:
+        print("Invalid input")
+        experience = input("Enter employee experience type (junior/medior/senior): ")
     employee = Employee(name, position, paygrade, experience)
     return employee
 
@@ -48,15 +54,19 @@ while True:
                 "paygrade": employee.paygrade,
                 "experience": employee.experience
             }
+            for i in range(3):
+                print()
             print("***** New Employee Added *****")
 
         elif selection1 == 3:
-            name = input("Enter the employee name to remove: ")
-            if name in current_employees:
-                del current_employees[name]
-                print(f"Employee '{name}' removed successfully")
-            else:
-                print(f"Employee '{name}' does not exist")
+            while True:
+                name = input("Enter the employee name to remove: ")
+                if name in current_employees:
+                    del current_employees[name]
+                    print(f"Employee '{name}' removed successfully")
+                    break
+                else:
+                    print(f"Employee '{name}' does not exist")
 
         elif selection1 == 4:
             continue
