@@ -29,11 +29,13 @@ while True:
     functions.menu()
     selection = int(input("Enter option> "))
 
+    # Entering sub-menu of "Employee Management"
     if selection == 1:
         functions.selection()
 
         selection1 = int(input("Enter option> "))
 
+        # View employee section
         if selection1 == 1:
             if len(current_employees) == 0:
                 print("No employees to display.")
@@ -46,6 +48,7 @@ while True:
                     print(f"Experience Level: {employee_data['experience']}")
                     print(functions.space)
 
+        # Add employee section
         elif selection1 == 2:
             functions.add_emp()
             employee = employee_details()
@@ -58,6 +61,7 @@ while True:
             print("***** New Employee Added *****")
             print(functions.line)
 
+        # Remove employee section
         # elif selection1 == 3:
         #     while True:
         #         name = input("Enter the employee name to remove: ")
@@ -74,6 +78,7 @@ while True:
         else:
             print("Invalid input, try again.")
 
+    # Entering sub-menu of "List of Pay Rates"
     elif selection == 2:
         print("List of Pay Rates")
         # Add code for the pay rates menu
