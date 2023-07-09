@@ -54,19 +54,19 @@ while True:
                 "paygrade": employee.paygrade,
                 "experience": employee.experience
             }
-            for i in range(3):
-                print()
+            print()
             print("***** New Employee Added *****")
+            print(functions.line)
 
-        elif selection1 == 3:
-            while True:
-                name = input("Enter the employee name to remove: ")
-                if name in current_employees:
-                    del current_employees[name]
-                    print(f"Employee '{name}' removed successfully")
-                    break
-                else:
-                    print(f"Employee '{name}' does not exist")
+        # elif selection1 == 3:
+        #     while True:
+        #         name = input("Enter the employee name to remove: ")
+        #         if name in current_employees:
+        #             del current_employees[name]
+        #             print(f"Employee '{name}' removed successfully")
+        #             break
+        #         else:
+        #             print(f"Employee '{name}' does not exist")
 
         elif selection1 == 4:
             continue
