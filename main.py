@@ -32,15 +32,15 @@ while True:
                 print(key, value)
 
             print(space)
-            print("1. View employee")
-            print("2. Go back to the main menu")
+            print("Select employee by number or q to return to main menu")
             print(space)
             nested_selection = int(input("Enter option> "))
             
-            if nested_selection == 2:
+            if nested_selection == "q":
                 break
             elif nested_selection == 1:
-                int(input("Enter option> "))
+                print("Mark")
+                pass
             else:
                 print("Invalid input, try again.")
     
