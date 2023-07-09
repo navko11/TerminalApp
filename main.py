@@ -1,70 +1,78 @@
 import functions
-import test
-import pay
 
-class employee_details:
+class Employee:
     def __init__(self, name, position, paygrade, experience):
         self.name = name
         self.position = position
         self.paygrade = paygrade
         self.experience = experience
 
-# # View added employee
-# for name, employee in employees.items():
-#     print("***** New Employee Added")
-#     print(f"Employee Name: {employee.name}")
-#     print(f"Position: {employee.position}")
-#     print(f"Paygrade Level: {employee.paygrade}")
-#     print(f"Experience: {employee.experience}")
+def employee_details():
+    name = input("Enter employee name: ")
+    position = input("Enter employee position: ")
+    paygrade = int(input("Enter employee paygrade level (0-6): "))
+    experience = input("Enter employee experience type (junior/medior/senior): ")
+    employee = Employee(name, position, paygrade, experience)
+    return employee
 
-# # Outer menu loop
-
-
-
+current_employees = {}
 
 while True:
     functions.menu()
-  
-    
     selection = int(input("Enter option> "))
 
-    
-    # Inner menu loop
     if selection == 1:
-        print("1. List of Employees")
+        print("1. View of Employees")
         print("2. Add Employee")
         print("3. Remove Employee")
         print("4. Back")
 
         selection1 = int(input("Enter option> "))
-        
-        while True:
-            if selection1 == 2:
-                employees = {}
 
-                name = input("Enter employee name: ")
-                position = input("Enter employee position: ")
-                paygrade = int(input("Enter employee paygrade level (0-6): "))
-                experience = input("Enter employee experience type (junior/medior/senior): ")
-                employee = employee_details(name, position, paygrade, experience)
-                employees[name] = employee # Add the employee to the employees dictionary
-                for name, employee in employees.items():
-                    print("***** New Employee Added")
-                    print(f"Employee Name: {employee.name}")
-                    print(f"Position: {employee.position}")
-                    print(f"Paygrade Level: {employee.paygrade}")
-                    print(f"Experience: {employee.experience}")
+        if selection1 == 1:
+            if len(current_employees) == 0:
+                print("No employees to display.")
+            else:
+                for name, employee_data in current_employees.items():
+                    print(f"Name: {name}")
+                    print(f"Position: {employee_data['position']}")
+                    print(f"Paygrade: {employee_data['paygrade']}")
+                    print(f"Experience: {employee_data['experience']}")
 
+        elif selection1 == 2:
+            employee = employee_details()
+            current_employees[employee.name] = {
+                "position": employee.position,
+                "paygrade": employee.paygrade,
+                "experience": employee.experience
+            }
+            print("***** New Employee Added *****")
 
-    # elif selection == 2:
-    #     print("List of Pay Rates"), # Add code for the pay rates menu
-        
-    # elif selection == 3:
-    #     print("Help Menu"), # Add code for the help menu
+        elif selection1 == 3:
+            name = input("Enter the employee name to remove: ")
+            if name in current_employees:
+                del current_employees[name]
+                print(f"Employee '{name}' removed successfully")
+            else:
+                print(f"Employee '{name}' does not exist")
 
-    # elif selection == 4:
-    #     print("Exiting program")
-    #     break
-    
-    # else:
-    #     print("Invalid input, try again.")
+        elif selection1 == 4:
+            continue
+
+        else:
+            print("Invalid input, try again.")
+
+    elif selection == 2:
+        print("List of Pay Rates")
+        # Add code for the pay rates menu
+
+    elif selection == 3:
+        print("Help Menu")
+        # Add code for the help menu
+
+    elif selection == 4:
+        print("Exiting program")
+        break
+
+    else:
+        print("Invalid input, try again.")
