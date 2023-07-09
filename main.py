@@ -17,15 +17,14 @@ def employee_details():
 
 current_employees = {}
 
+# Nested loop with main menu and inner loops with sub-menus
+
 while True:
     functions.menu()
     selection = int(input("Enter option> "))
 
     if selection == 1:
-        print("1. View of Employees")
-        print("2. Add Employee")
-        print("3. Remove Employee")
-        print("4. Back")
+        functions.selection()
 
         selection1 = int(input("Enter option> "))
 
@@ -33,13 +32,16 @@ while True:
             if len(current_employees) == 0:
                 print("No employees to display.")
             else:
+                functions.view_emp()
                 for name, employee_data in current_employees.items():
                     print(f"Name: {name}")
                     print(f"Position: {employee_data['position']}")
                     print(f"Paygrade: {employee_data['paygrade']}")
-                    print(f"Experience: {employee_data['experience']}")
+                    print(f"Experience Level: {employee_data['experience']}")
+                    print(functions.space)
 
         elif selection1 == 2:
+            functions.add_emp()
             employee = employee_details()
             current_employees[employee.name] = {
                 "position": employee.position,
