@@ -1,4 +1,5 @@
 import functions
+import pay
 
 class Employee:
     def __init__(self, name, position, paygrade, experience):
@@ -80,8 +81,8 @@ while True:
 
     # Entering sub-menu of "List of Pay Rates"
     elif selection == 2:
-        print("List of Pay Rates")
-        # Add code for the pay rates menu
+        print("List of Paygrades")
+        print(pay.paygrade_list())
 
     elif selection == 3:
         print("Help Menu")
