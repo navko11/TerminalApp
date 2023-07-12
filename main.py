@@ -2,24 +2,18 @@ import functions
 import pay
 
 class Employee:
-    def __init__(self, name, position, paygrade, experience):
+    def __init__(self, name, position, paygrade):
         self.name = name
         self.position = position
         self.paygrade = paygrade
-        self.experience = experience
 
 def employee_details():
-    name = input("Enter employee name: ")
-    position = input("Enter employee position: ")
+    name = input("Enter employee name: ").title()
+    position = input("Enter employee position: ").title()
     paygrade = int(input("Enter employee paygrade level (0-6): "))
     while paygrade not in [0, 1, 2, 3, 4, 5, 6]:
         print("Invalid input")
-        paygrade = int(input("Enter employee paygrade level (0-6): "))
-    experience = input("Enter employee experience type (junior/medior/senior): ")
-    while experience not in ["junior","medior","senior"]:
-        print("Invalid input")
-        experience = input("Enter employee experience type (junior/medior/senior): ")
-    employee = Employee(name, position, paygrade, experience)
+    employee = Employee(name, position, paygrade)
     return employee
 
 class SalaryLevels:
@@ -54,7 +48,6 @@ while True:
                     print(f"Name: {name}")
                     print(f"Position: {employee_data['position']}")
                     print(f"Paygrade: {employee_data['paygrade']}")
-                    print(f"Experience Level: {employee_data['experience']}")
                     print(functions.space)
 
         # Add employee section
@@ -64,7 +57,6 @@ while True:
             current_employees[employee.name] = {
                 "position": employee.position,
                 "paygrade": employee.paygrade,
-                "experience": employee.experience
             }
             print()
             print("***** New Employee Added *****")
