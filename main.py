@@ -63,31 +63,42 @@ while True:
             print(functions.line)
 
         # Remove employee section
-        # elif selection1 == 3:
-        # print employee list
-        #     while True:
-        #         name = input("Enter the employee name to remove: ")
-        #         if name in current_employees:
-        #             del current_employees[name]
-        #             print(f"Employee '{name}' removed successfully")
-        #             break
-        #         else:
-        #             print(f"Employee '{name}' does not exist")
-
-        elif selection1 == 4:
-            functions.weeklypay()
+        elif selection1 == 3:
             for i, worker in enumerate(current_employees.keys()):
                 print(f"{i+1}. {worker}")
 
-            employee_index = int(input("Select employee #: "))
-
+            employee_index = int(input("Input employee list number to remove: "))
             employee_list = list(current_employees.keys())
     
             if employee_index in range(1, len(employee_list) + 1):
                 selected_employee = employee_list[employee_index - 1]
-                print(f"You selected: {selected_employee}")
+                del current_employees[selected_employee]
+                print(f"***** {selected_employee} has been removed.*****")
             else:
-                print("Invalid employee selection.")
+                print("Invalid input.")
+            # while True:
+                # name = input("Enter the employee name to remove: ")
+                # if name in current_employees:
+                #     del current_employees[name]
+                #     print(f"Employee '{name}' removed successfully")
+                #     break
+                # else:
+                #     print(f"Employee '{name}' does not exist")
+
+        # elif selection1 == 4:
+        #     functions.weeklypay()
+        #     for i, worker in enumerate(current_employees.keys()):
+        #         print(f"{i+1}. {worker}")
+
+        #     employee_index = int(input("Select employee #: "))
+
+        #     employee_list = list(current_employees.keys())
+    
+        #     if employee_index in range(1, len(employee_list) + 1):
+        #         selected_employee = employee_list[employee_index - 1]
+        #         print(f"You selected: {selected_employee}")
+        #     else:
+        #         print("Invalid employee selection.")
 
             
 
