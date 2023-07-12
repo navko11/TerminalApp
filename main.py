@@ -22,6 +22,14 @@ def employee_details():
     employee = Employee(name, position, paygrade, experience)
     return employee
 
+class SalaryLevels:
+    def __init__(self):
+        self.level = [45000, 60000, 75000, 90000, 105000, 120000]
+
+    def get_salary(self, level):
+        if level in range(1, len(self.level) + 1):
+            return self.level[level - 1]
+
 current_employees = {}
 
 # Nested loop with main menu and inner loops with sub-menus
@@ -64,6 +72,7 @@ while True:
 
         # Remove employee section
         # elif selection1 == 3:
+        # print employee list
         #     while True:
         #         name = input("Enter the employee name to remove: ")
         #         if name in current_employees:
@@ -74,10 +83,28 @@ while True:
         #             print(f"Employee '{name}' does not exist")
 
         elif selection1 == 4:
-            continue
+            functions.weeklypay()
+            for i, worker in enumerate(current_employees.keys()):
+                print(f"{i+1}. {worker}")
 
-        else:
-            print("Invalid input, try again.")
+            employee_index = int(input("Select employee #: "))
+
+            employee_list = list(current_employees.keys())
+    
+            if employee_index in range(1, len(employee_list) + 1):
+                selected_employee = employee_list[employee_index - 1]
+                print(f"You selected: {selected_employee}")
+            else:
+                print("Invalid employee selection.")
+
+            
+
+
+        # elif selection1 == 5:
+        #     continue
+
+        # else:
+        #     print("Invalid input, try again.")
 
     # Entering sub-menu of "List of Pay Rates"
     elif selection == 2:

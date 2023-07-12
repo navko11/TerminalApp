@@ -21,7 +21,8 @@ def selection():
     print("1. View Employees")
     print("2. Add Employee")
     print("3. Remove Employee")
-    print("4. Back")
+    print("4. Employee hours worked (weekly)")
+    print("5. Back")
     print(line)
 
 def add_emp():
@@ -36,6 +37,16 @@ def view_emp():
     print("List of Employees")
     print(double_line)
     print(space)
+
+def weeklypay():
+    print(space)
+    print(double_line)
+    print("Employee weekly payslip")
+    print(double_line)
+    print(space)
+
+def weekly_hours():
+    int(input("Input weekly hours employee has worked: "))
 
     
 # Make a calculation function
