@@ -26,3 +26,15 @@ if salary is not None:
     print(f"Weekly Salary: ${salary/52:.2f}")
 else:
     print("Invalid salary level")
+
+
+    for i, worker in enumerate(current_employees.keys()):
+        print(f"{i+1}. {worker}")
+
+    employee_index = int(input("Select employee #: "))
+
+    employee_list = list(current_employees.keys())
+    
+    if employee_index in range(1, len(employee_list) + 1):
+        selected_employee = employee_list[employee_index - 1]
+        int(input(f"Input weekly hours worked for {selected_employee}> "))

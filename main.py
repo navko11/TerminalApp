@@ -80,7 +80,7 @@ while True:
     
             if employee_index in range(1, len(employee_list) + 1):
                 selected_employee = employee_list[employee_index - 1]
-                int(input(f"Input weekly hours worked for {selected_employee}> "))
+                int(input(f"Input weekly hours worked for {selected_employee}: "))
                 
 
             else:
