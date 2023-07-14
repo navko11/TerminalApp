@@ -32,6 +32,7 @@ Features of the app:
 
 - Employee class and function is created to define the information inputted by the user.
 - While loop is used to handle the error if invalid input is made in that input.
+- Title expression is used to automatically convert all first letters input word/s to uppercase.
 ![add3](appscreenshots/classemployee(add1).jpg)
 
 - Inputs are transferred as a key and value and is stored to a dictionary.
@@ -77,6 +78,7 @@ Features of the app:
 ![salarycode1](appscreenshots/salarycalc.jpg)
 
 - Conditional statement that takes the employees stored data (paygrade) and matches it to the corresponding salary level.
+- No else condition required as the operand is determined from the add employee feature.
 ![salarycode2](appscreenshots/salarycalc2.jpg)
 
 - Output all details of employee with finalized all input actions.
