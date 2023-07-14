@@ -13,8 +13,7 @@ def menu():
     print(double_line)
     print("1. Employee Management")
     print("2. List of Paygrades")
-    print("3. Help")
-    print("4. Exit Program")
+    print("3. Exit Program")
     print(line)
 
 def selection():

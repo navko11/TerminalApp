@@ -122,14 +122,12 @@ while True:
         print(pay.paygrade_list())       
         input(Fore.LIGHTYELLOW_EX + "Press any key to return"+ Style.RESET_ALL)
 
-
     elif selection == 3:
-        print("Help Menu")
-        # Add code for the help menu
-
-    elif selection == 4:
         print("Exiting program")
         break
 
     else:
-        print("Invalid input, try again.")
+        print(functions.space)     
+        print(Fore.RED +"Invalid input, try again."+ Style.RESET_ALL)
+        print(functions.space)
+
