@@ -1,5 +1,7 @@
 import functions
 import pay
+from art import *
+tprint("Payroll App")
 
 class Employee:
     def __init__(self, name, position, paygrade):

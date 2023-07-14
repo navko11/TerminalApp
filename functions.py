@@ -1,8 +1,10 @@
 # make minimum 6 functions
-line = ("-" * 50)
-double_line = ("=" * 50)
-space = (" " * 50)
+line = ("-" * 64)
+double_line = ("=" * 64)
+space = (" " * 64)
 # Menu function
+
+
 def menu():
     print(double_line)
     print("Main Menu")
