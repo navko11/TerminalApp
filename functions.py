@@ -1,12 +1,13 @@
 from colorama import init, Fore, Style
 init()
-# make minimum 6 functions
+
+# Borders and spacing
 line = ("-" * 64)
 double_line = ("=" * 64)
 space = (" " * 64)
+
+
 # Menu function
-
-
 def menu():
     print(double_line)
     print(Fore.LIGHTCYAN_EX + "Main Menu" + Style.RESET_ALL)
@@ -19,7 +20,7 @@ def menu():
 def selection():
     print(space)
     print(double_line)
-    print(Fore.LIGHTGREEN_EX + "Current Employees" + Style.RESET_ALL)
+    print(Fore.LIGHTGREEN_EX + "Employee Management" + Style.RESET_ALL)
     print(double_line)
     print("1. View Employees")
     print("2. Add Employee")
@@ -28,8 +29,6 @@ def selection():
     print("5. Back")
     print(line)
 
-def weekly_hours():
-    int(input("Input weekly hours employee has worked: "))
 
 # all menu and sub-menu borders and spacing below
 

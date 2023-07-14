@@ -98,6 +98,7 @@ while True:
                         print(functions.space)
                         print(Fore.RED + f"***** {selected_employee} has been removed. *****" + Style.RESET_ALL)
                         print(functions.space)
+                        break
                     elif employee_index == 0:
                         break
                     else:
