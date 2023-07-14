@@ -5,6 +5,8 @@ The project that I have decided to make is a replication of a simple payroll sys
 The system will allow you to view/add/remove employees and input basic information of employees.
 After all the inputs are declared with values, the result of the payslip of the employee will be displayed.
 
+![Title](appscreenshots/Screenshot_1.jpg)
+
 Python version 3.11.4
 
 As long as the python version is above 3.7 the app should run with no problem
