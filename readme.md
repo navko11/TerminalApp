@@ -37,7 +37,7 @@ Features of the app:
 ![add4](appscreenshots/classemployee(add2).jpg)
 
 - If input is not 1-6 error message will be thrown and user can attempt to input valid number.
-![add5](appscreenshots/erroraddemp.jpg)
+![adderror](appscreenshots/adderror.jpg)
 
 2. Removing employee
 
@@ -51,6 +51,7 @@ Features of the app:
 ![rmv2](appscreenshots/removeemp2.jpg)
 
 - Remove code includes control structures and nested looping.
+- Code will call the variable with all the stored data of employees by name.
 - Built in function "Enumerate" used to show employees in an ordered list.
 ![rmvcode](appscreenshots/rmvcode.jpg)
 
@@ -59,7 +60,18 @@ Features of the app:
 
 3. Displaying employees payslip with defined inputs
 
+- Option calls variable with existing employees in ordered list
+![payinput](appscreenshots/payslip.jpg)
 
+- Hours input will display all employee details and payslip
+![payoutput](appscreenshots/payslip2.jpg)
 
+- Defines salary level variables and converts them to hourly rate
+![salarycode1](appscreenshots/salarycalc.jpg)
 
+- Conditional statement that takes the employees stored data (paygrade) and matches it to the corresponding salary level.
+![salarycode2](appscreenshots/salarycalc2.jpg)
+
+- Output all details of employee with finalized all input actions.
+![codeprint](appscreenshots/salarycalc3.jpg)
 
