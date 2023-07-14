@@ -1,6 +1,9 @@
 import functions
 import pay
 from art import *
+from colorama import init, Fore, Style
+init()
+
 tprint("Payroll App")
 
 class Employee:
@@ -35,7 +38,10 @@ while True:
         # View employee section
         if selection1 == 1:
             if len(current_employees) == 0:
-                print("No employees to display.")
+                print(functions.space)
+                print(Fore.LIGHTRED_EX +"*****No employees to display.*****"+ Style.RESET_ALL)
+                print(functions.space)
+                input(Fore.LIGHTYELLOW_EX + "Press any key to return"+ Style.RESET_ALL)
             else:
                 functions.view_emp()
                 for name, employee_data in current_employees.items():
@@ -43,6 +49,7 @@ while True:
                     print(f"Position: {employee_data['position']}")
                     print(f"Paygrade: {employee_data['paygrade']}")
                     print(functions.space)
+                    input(Fore.LIGHTYELLOW_EX + "Press any key to return"+ Style.RESET_ALL)
 
         # Add employee section
         elif selection1 == 2:
@@ -52,41 +59,53 @@ while True:
                 "position": employee.position,
                 "paygrade": employee.paygrade,
             }
-            print()
-            print("***** New Employee Added *****")
-            print(functions.line)
+            print(functions.space)
+            print(Fore.GREEN + "***** New Employee Added *****"+ Style.RESET_ALL)
+            print(functions.space)
 
         # Remove employee section
         elif selection1 == 3:
-            for i, worker in enumerate(current_employees.keys()):
-                print(f"{i+1}. {worker}")
-
-            employee_index = int(input("Input employee list number to remove: "))
-            employee_list = list(current_employees.keys())
-    
-            if employee_index in range(1, len(employee_list) + 1):
-                selected_employee = employee_list[employee_index - 1]
-                del current_employees[selected_employee]
-                print(f"***** {selected_employee} has been removed.*****")
+            functions.removeemp()
+            if len(current_employees) == 0:
+                print(Fore.RED + "*****No employees to remove.*****"+ Style.RESET_ALL)
+                print(functions.space)
+                input(Fore.LIGHTYELLOW_EX + "Press any key to return"+ Style.RESET_ALL)
             else:
-                print("Invalid input.")
+                for i, worker in enumerate(current_employees.keys()):
+                    print(f"{i+1}. {worker}")
+                    print(functions.space)
+
+                employee_list = list(current_employees.keys())
+                employee_index = int(input("Input employee list number to remove: "))
+    
+                if employee_index in range(1, len(employee_list) + 1):
+                    selected_employee = employee_list[employee_index - 1]
+                    del current_employees[selected_employee]
+                    print(functions.space)
+                    print(Fore.RED + f"***** {selected_employee} has been removed.*****" + Style.RESET_ALL)
+                    print(functions.space)
+                else:
+                    print("Invalid input.")
 
         elif selection1 == 4:
             functions.weeklypay()
-            for i, worker in enumerate(current_employees.keys()):
-                print(f"{i+1}. {worker}")
-
-            employee_index = int(input("Select employee #: "))
-
-            employee_list = list(current_employees.keys())
-    
-            if employee_index in range(1, len(employee_list) + 1):
-                selected_employee = employee_list[employee_index - 1]
-                int(input(f"Input weekly hours worked for {selected_employee}: "))
-                
-
+            if len(current_employees) == 0:
+                print(Fore.RED + "*****No employees to select.*****"+ Style.RESET_ALL)
+                print(functions.space)
+                input(Fore.LIGHTYELLOW_EX + "Press any key to return"+ Style.RESET_ALL)
             else:
-                print("Invalid employee selection.")
+                for i, worker in enumerate(current_employees.keys()):
+                    print(f"{i+1}. {worker}")
+                    print(functions.space)         
+
+                    employee_index = int(input("Select employee #: "))
+                    employee_list = list(current_employees.keys())
+    
+                    if employee_index in range(1, len(employee_list) + 1):
+                        selected_employee = employee_list[employee_index - 1]
+                        int(input(f"Input weekly hours worked for {selected_employee}: "))
+                    else:
+                        print("Invalid employee selection.")
 
             
 
@@ -99,8 +118,10 @@ while True:
 
     # Entering sub-menu of "List of Pay Rates"
     elif selection == 2:
-        print("List of Paygrades")
-        print(pay.paygrade_list())
+        functions.viewpaygrade()
+        print(pay.paygrade_list())       
+        input(Fore.LIGHTYELLOW_EX + "Press any key to return"+ Style.RESET_ALL)
+
 
     elif selection == 3:
         print("Help Menu")

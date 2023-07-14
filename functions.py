@@ -1,3 +1,5 @@
+from colorama import init, Fore, Style
+init()
 # make minimum 6 functions
 line = ("-" * 64)
 double_line = ("=" * 64)
@@ -7,7 +9,7 @@ space = (" " * 64)
 
 def menu():
     print(double_line)
-    print("Main Menu")
+    print(Fore.LIGHTCYAN_EX + "Main Menu" + Style.RESET_ALL)
     print(double_line)
     print("1. Employee Management")
     print("2. List of Paygrades")
@@ -18,7 +20,7 @@ def menu():
 def selection():
     print(space)
     print(double_line)
-    print("Current Employees")
+    print(Fore.LIGHTGREEN_EX + "Current Employees" + Style.RESET_ALL)
     print(double_line)
     print("1. View Employees")
     print("2. Add Employee")
@@ -27,29 +29,43 @@ def selection():
     print("5. Back")
     print(line)
 
+def weekly_hours():
+    int(input("Input weekly hours employee has worked: "))
+
+# all menu and sub-menu borders and spacing below
+
 def add_emp():
     print(space)
     print(double_line)
-    print("Add Employee")
+    print(Fore.LIGHTMAGENTA_EX +"Add Employee"+ Style.RESET_ALL)
     print(double_line)
+    print(space)
 
 def view_emp():
     print(space)
     print(double_line)
-    print("List of Employees")
+    print(Fore.LIGHTGREEN_EX + "List of Employees"+ Style.RESET_ALL)
     print(double_line)
     print(space)
 
 def weeklypay():
     print(space)
     print(double_line)
-    print("Employee weekly payslip")
+    print(Fore.CYAN +"Employee weekly payslip"+ Style.RESET_ALL)
     print(double_line)
     print(space)
 
-def weekly_hours():
-    int(input("Input weekly hours employee has worked: "))
+def viewpaygrade():
+    print(space)
+    print(double_line)
+    print(Fore.LIGHTMAGENTA_EX + "List of Paygrades" + Style.RESET_ALL)
+    print(double_line)
+    print(space)
 
-    
-# Make a calculation function
+def removeemp():
+    print(space)
+    print(double_line)
+    print(Fore.LIGHTRED_EX+ "Remove Employee" + Style.RESET_ALL)
+    print(double_line)
+    print(space)
 
