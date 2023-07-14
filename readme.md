@@ -40,7 +40,7 @@ Features of the app:
 
 - Employee class and function is created to define the information inputted by the user.
 - While loop is used to handle the error if invalid input is made in that input.
-- Title expression is used to automatically convert all first letters input word/s to uppercase.
+- Title expression used in "name" and "position" variants to automatically convert all first letters input word/s to uppercase.
 ![add3](appscreenshots/classemployee(add1).jpg)
 
 - Inputs are transferred as a key and value and is stored to a dictionary.
@@ -59,7 +59,7 @@ Features of the app:
 - User will be actioned to return back to the menu
 ![rmverror](appscreenshots/error2.jpg)
 
-- When employee is selected confirmation in red text will output.
+- When employee is removed, confirmation in red text will output.
 ![rmv2](appscreenshots/removeemp2.jpg)
 
 - Remove code includes control structures and nested looping.
