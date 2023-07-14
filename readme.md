@@ -22,26 +22,40 @@ Features of the app:
 
 1. Adding employee information
 
-When in add menu option, user will be prompted to input new employee details.
-![Alt text](appscreenshots/addemp.jpg)
+- When in add menu option, user will be prompted to input new employee details.
+![add1](appscreenshots/addemp.jpg)
 
-When completed, a notice will be output to confirm addition of employee .
-![Alt text](appscreenshots/addemp1.jpg)
+- When completed, confirmation in green text will output.
+![add2](appscreenshots/addemp1.jpg)
 
-Employee class and function is created to define the information inputted by the user.
-While loop is used to handle the error if invalid input is made in that input.
-![Alt text](appscreenshots/classemployee(add1).jpg)
+- Employee class and function is created to define the information inputted by the user.
+- While loop is used to handle the error if invalid input is made in that input.
+![add3](appscreenshots/classemployee(add1).jpg)
 
-inputs are transferred as a key and value and is stored to a dictionary.
-functions are included and imported from other modules.
-![Alt text](appscreenshots/classemployee(add2).jpg)
+- Inputs are transferred as a key and value and is stored to a dictionary.
+- Functions are included and imported from other modules.
+![add4](appscreenshots/classemployee(add2).jpg)
 
-If input is not 1-6 error message will be thrown and user can attempt to input valid number.
-![Alt text](appscreenshots/erroraddemp.jpg)
+- If input is not 1-6 error message will be thrown and user can attempt to input valid number.
+![add5](appscreenshots/erroraddemp.jpg)
 
 2. Removing employee
 
+- Prompt to ask user to remove existing employee.
+![rmv1](appscreenshots/removeemp.jpg)
 
+- If there are no employees to remove, error will output in red text.
+![rmverror](appscreenshots/error2.jpg)
+
+- When employee is selected confirmation in red text will output.
+![rmv2](appscreenshots/removeemp2.jpg)
+
+- Remove code includes control structures and nested looping.
+- Built in function "Enumerate" used to show employees in an ordered list.
+![rmvcode](appscreenshots/rmvcode.jpg)
+
+- Example of Enumerate with extra added employees output
+![rmvnames](appscreenshots/rmvempnames.jpg)
 
 3. Displaying employees payslip with defined inputs
 
