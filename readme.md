@@ -5,20 +5,28 @@ The project that I have decided to make is a replication of a simple payroll sys
 The system will allow you to view/add/remove employees and input basic information of employees.
 After all the inputs are declared with values, the result of the payslip of the employee will be displayed.
 
+
 ![Title](appscreenshots/Screenshot_1.jpg)
 
-Python version 3.11.4
 
+ ** Using the App **
+App created with Python version 3.11.4
 As long as the python version is above 3.7 the app should run with no problem
+
 I had to input these commands in order to open virtual environment in my Windows system, it may be different for linux/mac users.
 1. python -m venv tutorial-env              
 2. Set-ExecutionPolicy Unrestricted -Scope Process (This step can be skipped if user is not restricted.)
 3. tutorial-env\Scripts\activate
 4. python main.py
 
+** Install packages **
 Packages used taken from https://pypi.org/:
 - pip install art = used for main menu title "Payroll App".
-- pip install colorama = used for sub-menu titles and error messages to give "life" to the terminal.             
+- pip install colorama = used for sub-menu titles and error messages to give "life" to the terminal.
+
+When terminal is running the app, navigation is made simply by inputting numbered options from a list on the menu.
+At the view/add/remove features of the app, inputs are to be created by the user to manage the app.
+When employees are created with data filled, complete "employee hours worked (weekly)" menu to receive payslip info.
 
 Features of the app:
 
