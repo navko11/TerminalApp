@@ -23,21 +23,21 @@ Features of the app:
 1. Adding employee information
 
 When in add menu option, user will be prompted to input new employee details.
-![Alt text](../appscreenshots/addemp.jpg)
+![Alt text](appscreenshots/addemp.jpg)
 
 When completed, a notice will be output to confirm addition of employee .
-![Alt text](../appscreenshots/addemp1.jpg)
+![Alt text](appscreenshots/addemp1.jpg)
 
 Employee class and function is created to define the information inputted by the user.
 While loop is used to handle the error if invalid input is made in that input.
-![Alt text](../appscreenshots/classemployee(add1).jpg)
+![Alt text](appscreenshots/classemployee(add1).jpg)
 
 inputs are transferred as a key and value and is stored to a dictionary.
 functions are included and imported from other modules.
-![Alt text](../appscreenshots/classemployee(add2).jpg)
+![Alt text](appscreenshots/classemployee(add2).jpg)
 
 If input is not 1-6 error message will be thrown and user can attempt to input valid number.
-![Alt text](../appscreenshots/erroraddemp.jpg)
+![Alt text](appscreenshots/erroraddemp.jpg)
 
 2. Removing employee
 
