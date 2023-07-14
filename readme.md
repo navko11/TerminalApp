@@ -17,8 +17,8 @@ I had to input these commands in order to open virtual environment in my Windows
 4. python main.py
 
 Packages used taken from https://pypi.org/:
-- pip install art
-- pip install colorama              
+- pip install art = used for main menu title "Payroll App".
+- pip install colorama = used for sub-menu titles and error messages to give "life" to the terminal.             
 
 Features of the app:
 
