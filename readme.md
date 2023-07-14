@@ -12,7 +12,7 @@ Python version 3.11.4
 As long as the python version is above 3.7 the app should run with no problem
 I had to input these commands in order to open virtual environment in my Windows system, it may be different for linux/mac users.
 1. python -m venv tutorial-env              
-2. Set-ExecutionPolicy Unrestricted -Scope Process
+2. Set-ExecutionPolicy Unrestricted -Scope Process (This step can be skipped if user is not restricted.)
 3. tutorial-env\Scripts\activate
 4. python main.py
 
@@ -38,7 +38,7 @@ Features of the app:
 - Functions are included and imported from other modules.
 ![add4](appscreenshots/classemployee(add2).jpg)
 
-- If input is not 1-6 error message will be thrown and user can attempt to input valid number.
+- If input is not 1-6 error message will be thrown and user can re-attempt to input valid number.
 ![adderror](appscreenshots/adderror.jpg)
 
 2. Removing employee
@@ -47,6 +47,7 @@ Features of the app:
 ![rmv1](appscreenshots/removeemp.jpg)
 
 - If there are no employees to remove, error will output in red text.
+- User will be actioned to return back to the menu
 ![rmverror](appscreenshots/error2.jpg)
 
 - When employee is selected confirmation in red text will output.
@@ -61,6 +62,10 @@ Features of the app:
 ![rmvnames](appscreenshots/rmvempnames.jpg)
 
 3. Displaying employees payslip with defined inputs
+
+- Error message will be displayed if there are no existing employees
+- User will be promted to return to menu.
+![noemployeeerror](appscreenshots/error3.jpg)
 
 - Option calls variable with existing employees in ordered list
 ![payinput](appscreenshots/payslip.jpg)
