@@ -1,5 +1,6 @@
 T1A3 - Terminal Application - Mark Navarro
 https://github.com/navko11/TerminalApp/tree/master
+https://youtu.be/3n4N5pIa-Cw - Slide Deck
 
 The project that I have decided to make is a replication of a simple payroll system.
 The system will allow you to view/add/remove employees and input basic information of employees.
